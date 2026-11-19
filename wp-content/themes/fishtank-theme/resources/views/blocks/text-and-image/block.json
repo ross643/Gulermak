@@ -1,0 +1,104 @@
+{
+	"name": "fishtank/text-and-image",
+	"editorStyle": "fishtank/text-and-image",
+	"viewStyle": "fishtank/text-and-image",
+	"editorScript": [
+		"fishtank/swiper",
+		"fishtank/text-and-image"
+	],
+	"viewScript": [
+		"fishtank/swiper",
+		"fishtank/text-and-image"
+	],
+	"title": "Text and Image",
+	"description": "",
+	"icon": "columns",
+	"keywords": [
+		"text",
+		"image"
+	],
+	"category": "fishtank",
+	"apiVersion": 3,
+	"acf": {
+		"mode": "preview",
+		"renderCallback": "\\App\\acf_block_render_callback"
+	},
+	"align": "full",
+	"styles": [
+		{
+			"name": "default",
+			"label": "Image Left",
+			"isDefault": true
+		},
+		{
+			"name": "image-right",
+			"label": "Image Right"
+		}
+	],
+	"supports": {
+		"multiple": true,
+		"jsx": true,
+		"align": false,
+		"mode": false,
+		"anchor": true,
+		"alignContent": false,
+		"ariaLabel": true,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false,
+			"__experimentalDefaultControls": {
+				"background": true
+			}
+		},
+		"alignText": false,
+		"spacing": {
+			"margin": false,
+			"padding": false
+		},
+		"typography": {
+			"lineHeight": false,
+			"fontSize": false
+		},
+		"fullHeight": false
+	},
+	"attributes": {
+		"style": {
+			"type": "object",
+			"default": {
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|md",
+						"bottom": "var:preset|spacing|md"
+					}
+				},
+				"color": {
+					"background": "var:preset|color|tertiary"
+				}
+			}
+		}
+	},
+	"example": {
+		"attributes": {
+			"data": {
+				"is_preview": true
+			},
+			"template": [
+				[
+					"core/heading",
+					{
+						"level": 2,
+						"placeholder": "Heading",
+						"style": {
+							"spacing": {
+								"margin": {
+									"bottom": "var:preset|spacing|xs"
+								}
+							}
+						}
+					}
+				]
+			]
+		}
+	}
+}

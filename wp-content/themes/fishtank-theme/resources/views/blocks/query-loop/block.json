@@ -1,0 +1,51 @@
+{
+	"name": "fishtank/query-loop",
+	"editorStyle": "fishtank/query-loop",
+	"title": "Query Loop Block",
+	"description": "Query Loop Block",
+	"icon": "superhero",
+	"keywords": [
+		"query",
+		"loop"
+	],
+	"category": "fishtank",
+	"apiVersion": 3,
+	"acf": {
+		"mode": "auto",
+		"renderCallback": "\\App\\acf_block_render_callback"
+	},
+	"align": "full",
+	"supports": {
+		"multiple": false,
+		"align": false,
+		"mode": false,
+		"anchor": true,
+		"alignContent": false,
+		"ariaLabel": true,
+		"color": {
+			"text": false,
+			"background": false,
+			"link": false
+		},
+		"alignText": false,
+		"spacing": {
+			"margin": [
+				"bottom"
+			],
+			"padding": false
+		},
+		"typography": {
+			"lineHeight": false,
+			"fontSize": false
+		},
+		"fullHeight": false
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"is_preview": true
+			}
+		}
+	}
+}

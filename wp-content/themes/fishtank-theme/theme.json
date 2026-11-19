@@ -1,0 +1,216 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": false,
+		"border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		},
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false,
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#8A82F6",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#FF1049",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#E1FB88",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "grey",
+					"color": "#DCDADD",
+					"name": "Grey"
+				},
+				{
+					"slug": "grey-light",
+					"color": "#F4F4F4",
+					"name": "Grey Light"
+				},
+				{
+					"slug": "grey-dark",
+					"color": "#4B4B4B",
+					"name": "Grey Dark"
+				},
+				{
+					"slug": "light",
+					"color": "#ffffff",
+					"name": "Light"
+				},
+				{
+					"slug": "dark",
+					"color": "#050505",
+					"name": "Dark"
+				},
+				{
+					"slug": "body",
+					"color": "#222222",
+					"name": "Dark"
+				}
+			]
+		},
+		"spacing": {
+			"blockGap": true,
+			"margin": true,
+			"padding": true,
+			"units": [
+				"px"
+			],
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"size": "30px",
+					"slug": "xs",
+					"name": "XS"
+				},
+				{
+					"size": "60px",
+					"slug": "sm",
+					"name": "SM"
+				},
+				{
+					"size": "90px",
+					"slug": "md",
+					"name": "MD"
+				},
+				{
+					"size": "120px",
+					"slug": "lg",
+					"name": "LG"
+				},
+				{
+					"size": "150px",
+					"slug": "xl",
+					"name": "XL"
+				},
+				{
+					"size": "180px",
+					"slug": "xxl",
+					"name": "XXL"
+				},
+				{
+					"size": "210px",
+					"slug": "xxxl",
+					"name": "XXXL"
+				}
+			]
+		},
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"text": false,
+					"background": false
+				},
+				"spacing": {
+					"padding": false,
+					"margin": [
+						"bottom"
+					]
+				},
+				"typography": {
+					"fontSizes": [],
+					"fontFamilies": []
+				}
+			},
+			"core/list": {
+				"color": {
+					"text": false,
+					"background": false
+				},
+				"spacing": {
+					"padding": false,
+					"margin": false
+				}
+			},
+			"core/list-item": {
+				"color": {
+					"text": false,
+					"background": false
+				},
+				"spacing": {
+					"padding": false,
+					"margin": false
+				},
+				"typography": {
+					"fontSizes": [],
+					"fontFamilies": []
+				}
+			},
+			"core/paragraph": {
+				"color": {
+					"text": false,
+					"background": false
+				},
+				"spacing": {
+					"padding": false,
+					"margin": [
+						"bottom"
+					]
+				},
+				"typography": {
+					"fontSizes": [],
+					"fontFamilies": []
+				}
+			}
+		},
+		"typography": {
+			"customFontSize": false,
+			"fontStyle": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"lineHeight": false,
+			"textDecoration": false,
+			"textTransform": false,
+			"dropCap": false,
+			"fontSizes": [],
+			"fontFamilies": [
+				{
+					"fontFamily": "Poppins,sans-serif",
+					"name": "Poppins",
+					"slug": "poppins"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": null,
+			"wideSize": null
+		},
+		"custom": {
+			"navigationStyle": 1,
+			"footerStyle": 1
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--poppins)",
+			"fontSize": "18px",
+			"fontWeight": "400",
+			"lineHeight": "1.4"
+		},
+		"elements": {
+			"link": {
+				"typography": {
+					"textDecoration": false
+				}
+			}
+		}
+	}
+}

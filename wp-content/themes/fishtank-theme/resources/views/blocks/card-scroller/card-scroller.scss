@@ -1,0 +1,87 @@
+@use '@styles/utils' as *;
+
+.wp-block-fishtank-card-scroller {
+	// Styles for Card Scroller
+	.inner {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 60px;
+
+		@include mobilefirst(1100) {
+			grid-template-columns: 400px 1fr;
+		}
+
+		@include mobilefirst(1400) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__left {
+			min-width: 0;
+			max-width: 100%;
+			.wysiwyg {
+				position: sticky;
+				top: 100px;
+
+				@include responsive(1100) {
+					width: 600px;
+					margin-inline: auto;
+					max-width: 100%;
+				}
+			}
+		}
+
+		&__right {
+			min-width: 0;
+			max-width: 100%;
+			.cards {
+				display: flex;
+				flex-direction: column;
+				gap: 60px;
+
+				@include responsive(1100) {
+					width: 600px;
+					margin-inline: auto;
+					max-width: 100%;
+				}
+
+				.card {
+					padding: 40px;
+					background-color: wp-color(primary);
+					color: wp-color(light);
+					border-radius: 5px;
+
+					&__title {
+						margin-bottom: 20px;
+					}
+					&__content {
+						margin-bottom: 60px;
+					}
+
+					&__link {
+						margin-top: 30px;
+						a {
+							display: inline-flex;
+							align-items: center;
+							gap: 20px;
+							&,
+							svg {
+								color: inherit;
+							}
+
+							svg {
+								width: 24px;
+							}
+						}
+					}
+				}
+			}
+
+			.card {
+				&__title {
+					font-size: 24px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

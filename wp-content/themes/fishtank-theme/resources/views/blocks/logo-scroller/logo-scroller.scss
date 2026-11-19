@@ -1,0 +1,128 @@
+@use '@styles/utils' as *;
+@keyframes scroll-rtl {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%); //#here
+	}
+}
+@keyframes scroll-ltr {
+	from {
+		transform: translateX(-100%); //#here
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+.wp-block-fishtank-logo-scroller {
+	.inner {
+		overflow: hidden;
+		border-radius: 12px;
+		padding-bottom: 80px;
+
+		@include mobilefirst(1024) {
+			padding-bottom: 120px;
+		}
+
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.slider-nav {
+				display: flex;
+				gap: 16px;
+
+				button {
+					appearance: none;
+					border: none;
+					width: 50px;
+					height: 50px;
+					appearance: none;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 8px;
+					svg {
+						width: 21px;
+					}
+				}
+			}
+		}
+
+		.marquee-wrapper {
+			display: flex;
+			flex-flow: column;
+			gap: 20px;
+			.marquee {
+				display: flex;
+				overflow: hidden;
+				user-select: none;
+				gap: 20px;
+
+				.marquee__group {
+					flex-shrink: 0;
+					display: inline-flex;
+					align-items: center;
+					justify-content: space-around;
+					gap: 20px; //#here
+					min-width: 100%;
+					animation: scroll-rtl linear infinite; // change 60s to speed up or slow it down
+					transition: transform 0.2s ease;
+
+					li {
+						width: 230px;
+						height: 100px;
+						list-style: none;
+						@include mobilefirst(1024) {
+							width: 300px;
+							height: 120px;
+						}
+						.logo-wrap {
+							appearance: none;
+							background-color: #fff;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 100%;
+							height: 100%;
+							border-radius: 12px;
+							img {
+								max-width: 80%;
+								max-height: 80%;
+								object-fit: contain;
+								pointer-events: none;
+							}
+						}
+					}
+				}
+
+				&.marquee-ltr {
+					.marquee__group {
+						animation-name: scroll-ltr;
+					}
+				}
+			}
+
+			&.active {
+				.marquee {
+					.marquee__group {
+						animation: scroll-rtl 15s linear infinite;
+					}
+				}
+			}
+
+			&:hover {
+				.marquee__group {
+					animation-play-state: paused;
+				}
+			}
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.marquee .marquee__group {
+			animation-play-state: paused;
+		}
+	}
+}

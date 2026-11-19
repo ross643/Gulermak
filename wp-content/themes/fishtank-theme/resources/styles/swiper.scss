@@ -1,0 +1,39 @@
+@use 'utils' as *;
+// CORE
+@use 'swiper/css';
+// MODULES
+@use 'swiper/css/navigation';
+// @use 'swiper/css/pagination';
+// @use 'swiper/css/effect-cards';
+// @use 'swiper/css/scrollbar';
+// @use 'swiper/css/effect-fade';
+// @use 'swiper/css/effect-cube';
+// @use 'swiper/css/effect-flip';
+// @use 'swiper/css/effect-coverflow';
+// @use 'swiper/css/grid';
+// @use 'swiper/css/thumbs';
+// @use 'swiper/css/virtual';
+// @use 'swiper/css/zoom';
+// @use 'swiper/css/autoplay';
+// @use 'swiper/css/free-mode';
+// @use 'swiper/css/mousewheel';
+// @use 'swiper/css/keyboard';
+// @use 'swiper/css/a11y';
+
+/*** 
+	Custom Styles 
+***/
+
+.swiper {
+	.swiper-wrapper {
+		.swiper-slide {
+			// Your custom styles here
+		}
+	}
+	.swiper-button {
+		&--next,
+		&--prev {
+			// Your custom styles here
+		}
+	}
+}

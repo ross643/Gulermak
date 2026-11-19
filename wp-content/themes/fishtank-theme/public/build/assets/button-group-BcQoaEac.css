@@ -1,0 +1,1 @@
+.btn-group{display:flex;flex-flow:row wrap;align-items:center;gap:20px}.btn-group--left{justify-content:flex-start}.btn-group--center{justify-content:center}.btn-group--right{justify-content:flex-end}

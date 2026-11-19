@@ -1,0 +1,51 @@
+{
+	"name": "fishtank/expanding-service-cards",
+	"title": "Expanding Service Cards",
+	"description": "Heading and intro with horizontal cards that expand on click.",
+	"editorStyle": "fishtank/expanding-service-cards",
+	"viewStyle": "fishtank/expanding-service-cards",
+	"editorScript": "fishtank/expanding-service-cards",
+	"viewScript": "fishtank/expanding-service-cards",
+	"category": "fishtank",
+	"icon": "grid-view",
+	"keywords": ["cards", "accordion", "services", "expand"],
+	"apiVersion": "3",
+	"acf": {
+		"blockVersion": "3",
+		"hideFieldsInSidebar": true,
+		"mode": "preview",
+		"renderCallback": "\\App\\acf_block_render_callback"
+	},
+	"supports": {
+		"jsx": true,
+		"multiple": true,
+		"align": false,
+		"anchor": true,
+		"alignContent": false,
+		"html": false,
+		"ariaLabel": true,
+		"color": {
+			"text": false,
+			"background": false,
+			"link": false
+		},
+		"alignText": false,
+		"typography": {
+			"lineHeight": false,
+			"fontSize": false
+		},
+		"fullHeight": false,
+		"spacing": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"]
+		}
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"is_preview": true
+			}
+		}
+	}
+}

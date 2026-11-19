@@ -1,0 +1,41 @@
+@use '@styles/utils' as *;
+
+.wp-block-fishtank-button,
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	height: 40px;
+	padding: 0 20px;
+	border-radius: 25px;
+	color: #000;
+	text-decoration: none;
+	background-color: wp-color('primary');
+	color: wp-color('light');
+	font-size: 16px;
+
+	&--secondary,
+	&.is-style-secondary {
+		background-color: wp-color('secondary');
+		color: wp-color('light');
+	}
+
+	&--tertiary,
+	&.is-style-tertiary {
+		background-color: wp-color('tertiary');
+		color: wp-color('dark');
+	}
+
+	&--dark,
+	&.is-style-dark {
+		background-color: wp-color('dark');
+		color: wp-color('light');
+	}
+
+	&--light,
+	&.is-style-light {
+		background-color: wp-color('light');
+		color: wp-color('dark');
+	}
+}

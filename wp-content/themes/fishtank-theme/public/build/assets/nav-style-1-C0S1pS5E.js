@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".burger-menu");e.addEventListener("click",()=>{document.body.classList.toggle("mobile-nav-open"),e.setAttribute("aria-expanded",document.body.classList.contains("mobile-nav-open"))})});

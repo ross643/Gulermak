@@ -1,0 +1,15 @@
+@use '@styles/utils' as *;
+
+.site-footer {
+	padding: 120px 0;
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		.footer__logo {
+			svg {
+				width: 230px;
+			}
+		}
+	}
+}

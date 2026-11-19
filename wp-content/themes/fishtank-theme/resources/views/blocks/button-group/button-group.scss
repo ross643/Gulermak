@@ -1,0 +1,19 @@
+@use '@styles/utils' as *;
+.btn-group {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	gap: 20px;
+
+	&--left {
+		justify-content: flex-start;
+	}
+
+	&--center {
+		justify-content: center;
+	}
+
+	&--right {
+		justify-content: flex-end;
+	}
+}

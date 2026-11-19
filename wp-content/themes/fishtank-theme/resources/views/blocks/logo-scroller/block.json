@@ -1,0 +1,65 @@
+{
+	"name": "fishtank/logo-scroller",
+	"title": "Logo Scroller",
+	"description": "A custom Logo Scroller block.",
+	"style": "fishtank/logo-scroller",
+	"script": "fishtank/logo-scroller",
+	"category": "fishtank",
+	"icon": "superhero",
+	"apiVersion": "3",
+	"acf": {
+		"blockVersion": "3",
+		"hideFieldsInSidebar": true,
+		"mode": "preview",
+		"renderCallback": "\\App\\acf_block_render_callback"
+	},
+	"supports": {
+		"jsx": true,
+		"multiple": true,
+		"align": false,
+		"anchor": true,
+		"alignContent": false,
+		"html": false,
+		"ariaLabel": true,
+		"color": {
+			"text": false,
+			"background": false,
+			"link": false
+		},
+		"alignText": false,
+		"typography": {
+			"lineHeight": false,
+			"fontSize": false
+		},
+		"fullHeight": false,
+		"spacing": {
+			"margin": [
+				"top",
+				"bottom"
+			],
+			"padding": [
+				"top",
+				"bottom"
+			]
+		}
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"is_preview": true
+			},
+			"style": {
+				"type": "object",
+				"default": {
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|md",
+							"bottom": "var:preset|spacing|md"
+						}
+					}
+				}
+			}
+		}
+	}
+}

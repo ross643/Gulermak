@@ -1,0 +1,48 @@
+@use 'sass:meta';
+// @forward 'common';
+
+// Load Poppins in the editor (theme.json applies it via --wp--preset--font-family--poppins)
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+.editor-styles-wrapper {
+	// Path relative to this file so the editor build resolves common reliably
+	@include meta.load-css('common');
+	/* include sections here */
+	// @include meta.load-css('sections/forms');
+
+	/* used as a container class for gutenberg editor */
+	&.block-editor-writing-flow {
+		width: 100%;
+		// max-width: calc(100% - 60px);
+		margin: auto;
+	}
+}
+
+#editor {
+	.edit-post-visual-editor {
+		background-color: unset;
+		&__post-title-wrapper {
+			margin-bottom: 4em;
+			padding-left: 60px;
+			padding-right: 40px;
+		}
+	}
+}
+
+// Fixes block preview iframe width
+.block-editor-block-preview__container .block-editor-block-preview__content iframe {
+	max-width: unset;
+}
+
+// Hides H1 option in heading block - could stop working in future WP versions
+.block-library-heading-level-dropdown {
+	button:first-child {
+		display: none;
+	}
+}
+
+.wp-block-fishtank-button-group {
+	&.is-selected {
+		padding: 5px;
+	}
+}

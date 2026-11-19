@@ -1,0 +1,21 @@
+# Sage + ACF Project Rules
+
+- **Framework:** Always use Roots Sage (11+).
+- **PHP:** Use Laravel-style syntax. Prefer modern PHP (8.x) features.
+- **Blade:** Always use Blade components for repetitive HTML. Keep Blade logic minimal.
+- **ACF Blocks:**
+    - Use Acorn-style data fetching in `app/View/Composers`.
+    - Define fields in json files in `app/acf-json/`.
+    - Define/Register custom blocks in FISHTANK_BLOCKS in `app/setup.php`
+- **Project Structure:**
+    - `app/` is for backend logic (Controllers/Composers).
+    - `resources/views/` is for frontend templates
+    - `resources/styles/` is for general styleing
+    - `resources/views/blocks/**/*.scss` for block specific styling
+    - `resources/views/blocks/**/*.js` for block specific javascript
+    - `resources/views/blocks/text-and-image/` as a rough guide to how we strcture our HTLM and styling
+    - `theme.json` used for theme wide settings like colours, spacing, CMS/block functionality etc
+- **Constraints:**
+    - Always prefer reusable components over large template files.
+    - Use `esc_html()` or `esc_attr()` for all user-generated output in PHP.
+    - Do not use `get_template_part()`; use `@includeIf` or `<x-component />` syntax.

@@ -1,0 +1,184 @@
+{
+	"key": "group_699expsvc001",
+	"title": "[BLOCK] Expanding Service Cards",
+	"fields": [
+		{
+			"key": "field_699expc001",
+			"label": "Section heading",
+			"name": "section_heading",
+			"type": "text",
+			"instructions": "Large mint headline (left on desktop).",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "We support every space with expert electrical solutions",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_699expc002",
+			"label": "Section intro",
+			"name": "section_intro",
+			"type": "textarea",
+			"instructions": "Supporting paragraph (right on desktop, white text).",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "Our work spans domestic, commercial, government, and building management projects, bringing the same level of precision, safety, and care to every job. Whether it's a simple upgrade or a full system design.",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"rows": 4,
+			"placeholder": "",
+			"new_lines": ""
+		},
+		{
+			"key": "field_699expc003",
+			"label": "Cards",
+			"name": "cards",
+			"type": "repeater",
+			"instructions": "Each row is one expandable card. The first row is expanded by default on page load.",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"pagination": 0,
+			"min": 1,
+			"max": 0,
+			"collapsed": "field_699expc004",
+			"button_label": "Add card",
+			"rows_per_page": 20,
+			"sub_fields": [
+				{
+					"key": "field_699expc004",
+					"label": "Category title",
+					"name": "card_title",
+					"type": "text",
+					"instructions": "Shown on the narrow card and as the lead line when expanded.",
+					"required": 1,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"parent_repeater": "field_699expc003"
+				},
+				{
+					"key": "field_699expc005",
+					"label": "Subheading",
+					"name": "card_subheading",
+					"type": "text",
+					"instructions": "Shown only when the card is expanded.",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"parent_repeater": "field_699expc003"
+				},
+				{
+					"key": "field_699expc006",
+					"label": "Description",
+					"name": "card_description",
+					"type": "textarea",
+					"instructions": "Body copy when expanded. Blank lines become separate paragraphs.",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"allow_in_bindings": 1,
+					"rows": 6,
+					"placeholder": "",
+					"new_lines": "",
+					"parent_repeater": "field_699expc003"
+				},
+				{
+					"key": "field_699expc007",
+					"label": "Button text",
+					"name": "button_text",
+					"type": "text",
+					"instructions": "Gradient CTA label when expanded.",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "50",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"parent_repeater": "field_699expc003"
+				},
+				{
+					"key": "field_699expc008",
+					"label": "Button link",
+					"name": "button_link",
+					"type": "link",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "50",
+						"class": "",
+						"id": ""
+					},
+					"return_format": "array",
+					"allow_in_bindings": 0,
+					"parent_repeater": "field_699expc003"
+				}
+			]
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "block",
+				"operator": "==",
+				"value": "fishtank/expanding-service-cards"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0
+}

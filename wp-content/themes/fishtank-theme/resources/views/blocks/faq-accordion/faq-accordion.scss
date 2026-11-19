@@ -1,0 +1,87 @@
+@use '@styles/utils' as *;
+
+.wp-block-fishtank-faq-accordion {
+	.faq-accordion {
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+		}
+
+		&__item {
+			border-bottom: 1px solid currentColor;
+			&:first-child {
+				border-top: 1px solid currentColor;
+			}
+		}
+
+		&__heading {
+			margin: 0;
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+		}
+
+		&__trigger {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			padding: 1rem 0;
+			text-align: left;
+			appearance: none;
+			background: none;
+			border: none;
+			cursor: pointer;
+			font: inherit;
+			color: inherit;
+			gap: 1rem;
+
+			&:hover {
+				opacity: 0.85;
+			}
+
+			&:focus-visible {
+				outline: 2px solid currentColor;
+				outline-offset: 2px;
+			}
+		}
+
+		&__question {
+			flex: 1;
+		}
+
+		&__icon {
+			flex-shrink: 0;
+			width: 1.25rem;
+			height: 1.25rem;
+			position: relative;
+			transition: transform 0.2s ease;
+		}
+
+		&__trigger[aria-expanded='true'] .faq-accordion__icon {
+			transform: rotate(90deg);
+		}
+
+		&__panel {
+			overflow: hidden;
+			max-height: 0;
+
+			&.faq-accordion__panel--open {
+				max-height: 2000px;
+			}
+		}
+
+		&__content {
+			padding-bottom: 1rem;
+			padding-right: 2.25rem;
+
+			> *:first-child {
+				margin-top: 0;
+			}
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+{
+    "key": "group_6814af72e968d",
+    "title": "H1 for SEO",
+    "fields": [
+        {
+            "key": "field_6814af73038f7",
+            "label": "H1 for SEO",
+            "name": "h1_for_seo",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "By default the H1 tag for the page will be the title of the page - his will overwrite that. Note that  H1 tags are hidden (screen reader only).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1746186424
+}

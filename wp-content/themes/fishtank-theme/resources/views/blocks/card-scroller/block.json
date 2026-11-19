@@ -1,0 +1,79 @@
+{
+	"name": "fishtank/card-scroller",
+	"title": "Card Scroller",
+	"description": "A custom Card Scroller block.",
+	"style": "fishtank/card-scroller",
+	"script": false,
+	"category": "fishtank",
+	"icon": "superhero",
+	"apiVersion": "3",
+	"acf": {
+		"blockVersion": "3",
+		"hideFieldsInSidebar": true,
+		"mode": "preview",
+		"renderCallback": "\\App\\acf_block_render_callback"
+	},
+	"supports": {
+		"jsx": true,
+		"multiple": true,
+		"align": false,
+		"anchor": true,
+		"alignContent": false,
+		"html": false,
+		"ariaLabel": true,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		},
+		"alignText": false,
+		"typography": {
+			"lineHeight": false,
+			"fontSize": false
+		},
+		"fullHeight": false,
+		"spacing": {
+			"margin": [
+				"top",
+				"bottom"
+			],
+			"padding": [
+				"top",
+				"bottom"
+			]
+		}
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"is_preview": true
+			},
+			"style": {
+				"type": "object",
+				"default": {
+					"color": {
+						"background": "var:preset|color|tertiary"
+					},
+					"spacing": {
+						"padding": {
+							"top": "var:preset|spacing|md",
+							"bottom": "var:preset|spacing|md"
+						}
+					}
+				}
+			},
+			"template": [
+				"core/heading",
+				{
+					"level": 2,
+					"placeholder": "Heading",
+					"fontSize": "large"
+				}
+			]
+		}
+	},
+	"allowedBlocks": [
+		"core/heading"
+	]
+}

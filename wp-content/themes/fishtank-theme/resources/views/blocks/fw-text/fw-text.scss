@@ -1,0 +1,35 @@
+@use '@styles/utils' as *;
+.wp-block-fishtank-text-and-image {
+	.inner {
+		display: grid;
+		gap: 50px;
+		grid-template-columns: 1fr;
+
+		@include between(768, 1100) {
+			width: 768px;
+		}
+
+		@include mobilefirst(1110) {
+			gap: 100px;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__img {
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	&.is-style-image-right {
+		.inner {
+			&__text {
+				order: 1;
+			}
+			&__img {
+				order: 2;
+			}
+		}
+	}
+}

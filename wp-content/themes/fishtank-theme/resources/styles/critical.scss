@@ -1,0 +1,21 @@
+@forward 'critical/reset';
+@forward 'critical/fonts';
+@use 'utils' as *;
+
+/**
+* Colors
+* 
+* NOTICE:
+* - Theme colors are now set in /resources/theme.json
+* - A custom SASS function `wp_color()` has been created in /resources/assets/styles/common/scss
+*/
+
+$colors-array: 'primary', 'secondary', 'tertiary', 'light', 'dark'; // Add/Remove as required to match colors in theme.json
+@each $color in $colors-array {
+	.#{$color} {
+		color: wp-color(#{$color});
+		&--bg {
+			background-color: wp-color(#{$color});
+		}
+	}
+}

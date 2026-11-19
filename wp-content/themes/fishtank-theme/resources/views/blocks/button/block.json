@@ -1,0 +1,61 @@
+{
+	"name": "fishtank/button",
+	"editorStyle": "fishtank/button",
+	"viewStyle": "fishtank/button",
+	"title": "Button",
+	"description": "Button / CTA",
+	"icon": "button",
+	"keywords": [
+		"button",
+		"category"
+	],
+	"category": "fishtank",
+	"apiVersion": 3,
+	"acf": {
+		"mode": "preview",
+		"renderCallback": "\\App\\acf_block_render_callback"
+	},
+	"align": "full",
+	"styles": [
+		{
+			"name": "default",
+			"label": "Primary",
+			"isDefault": true
+		},
+		{
+			"name": "secondary",
+			"label": "Secondary"
+		},
+		{
+			"name": "tertiary",
+			"label": "Tertiary"
+		}
+	],
+	"supports": {
+		"multiple": true,
+		"jsx": true,
+		"align": false,
+		"mode": false,
+		"anchor": true,
+		"alignContent": false,
+		"ariaLabel": true,
+		"color": {
+			"text": false,
+			"background": false,
+			"link": true
+		},
+		"alignText": false,
+		"typography": {
+			"lineHeight": false,
+			"fontSize": false
+		},
+		"fullHeight": false
+	},
+	"example": {
+		"attributes": {
+			"data": {
+				"is_preview": true
+			}
+		}
+	}
+}

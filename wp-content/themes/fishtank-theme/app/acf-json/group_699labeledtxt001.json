@@ -1,0 +1,112 @@
+{
+    "key": "group_699labeledtxt001",
+    "title": "[BLOCK] Labeled Text Section",
+    "fields": [
+        {
+            "key": "field_699labeledtxt002",
+            "label": "Label",
+            "name": "label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short accent heading shown in the left column (e.g. section title).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "Title here",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_699labeledtxt003",
+            "label": "Intro",
+            "name": "intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Opening paragraph (larger type).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "At EcoBright, we believe being a local business comes with a responsibility to power more than just homes and buildings — we're here to energise our community too.",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_699labeledtxt004",
+            "label": "Body",
+            "name": "body",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Supporting copy. Separate paragraphs with a blank line.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "We regularly donate time and expertise to support local charities, schools and community centres with safe, reliable electrical work. From helping with upgrades in community halls to mentoring young apprentices, we're committed to giving back in a way that makes a lasting difference. Because powering people matters just as much as powering properties.",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 8,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_699labeledtxt005",
+            "label": "Show top divider",
+            "name": "show_divider",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the horizontal rule above the section content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "fishtank\/labeled-text-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1779463023
+}

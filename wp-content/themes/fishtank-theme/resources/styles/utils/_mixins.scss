@@ -1,0 +1,69 @@
+@use 'sass:math';
+
+@mixin responsive($res) {
+	@if (math.is-unitless($res)) {
+		$res: #{$res - 1}px;
+	} @else {
+		$res: $res - 1px;
+	}
+
+	@media screen and (max-width: $res) {
+		@content;
+	}
+}
+
+@mixin mobilefirst($res) {
+	@if (math.is-unitless($res)) {
+		$res: #{$res}px;
+	}
+
+	@media screen and (min-width: $res) {
+		@content;
+	}
+}
+
+@mixin between($min, $max) {
+	@if (math.is-unitless($min)) {
+		$min: #{$min}px;
+	}
+	@if (math.is-unitless($max)) {
+		$max: #{$max}px;
+	}
+	@media screen and (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
+
+/* Variable functions */
+@function wp-color($color) {
+	@return var(--wp--preset--color--#{$color});
+}
+
+@function wp-spacing($size) {
+	@return var(--wp--preset--spacing--#{$size});
+}
+
+/**
+* Better Clamp function for fonts etc
+*/
+
+@mixin betterClamp($property, $minSize, $maxSize, $minWidth: 480, $maxWidth: 1920) {
+	// convert to rem
+	$minSize: calc($minSize / 16);
+	$maxSize: calc($maxSize / 16);
+	$maxWidth: calc($maxWidth / 16);
+	$minWidth: calc($minWidth / 16);
+	// do calculations
+	$slope: calc(($maxSize - $minSize) / ($maxWidth - $minWidth));
+	$yAxisIntersection: -$minWidth * $slope + $minSize;
+	$preferredValue: #{$yAxisIntersection * 1rem} + ' + ' + #{$slope * 100vw};
+	// output as rem
+	$minSize: $minSize * 1rem;
+	$maxSize: $maxSize * 1rem;
+
+	@if $minSize > $maxSize {
+		#{$property}: clamp($maxSize, $preferredValue, $minSize);
+	} @else {
+		#{$property}: clamp($minSize, $preferredValue, $maxSize);
+	}
+}
